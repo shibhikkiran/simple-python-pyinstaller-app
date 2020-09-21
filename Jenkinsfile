@@ -1,6 +1,8 @@
 pipeline {
     agent none
-    skipStagesAfterUnstable()
+    options {
+        skipStagesAfterUnstable()
+    }
     stages {
         stage('Build') { 
             agent {
